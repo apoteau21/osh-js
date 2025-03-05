@@ -34,6 +34,7 @@
     "build-package": "yarn clean-package && yarn prepare-package && yarn copy-sources && yarn transpile && node config/prepare-package"
   },
   "devDependencies": {
+    "osh-js": "git+https@github.com:opensensorhub/osh-js.git#dev",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
