@@ -1,4 +1,3 @@
-// create data source for Android phone camera
 import ChartJsView from 'osh-js/core/ui/view/chart/ChartJsView.js';
 import CurveLayer from 'osh-js/core/ui/layer/CurveLayer.js';
 import SosGetResultJson from 'osh-js/core/datasource/SosGetResultJson.js';
@@ -28,7 +27,7 @@ let MVLayerCurve = new CurveLayer({
                       y: parseFloat(rec.Millivolts.replace(/[^\d.-]/g, ''))
                 };
             } else {
-                console.log("Record does not contain milliVolts.");
+                console.log("Record does not contain millivolts.");
             }
             return null;
     },
@@ -59,15 +58,14 @@ let PPMLayerCurve = new CurveLayer({
 // show it in video view
 let chartView = new ChartJsView({
     container: 'turb-container',
-    layers: [ MVLayerCurve, PPMLayerCurve],
+    layers: [MVLayerCurve, PPMLayerCurve],
     css: "chart-view",
     chartjsProps: {
         chartProps: {
             scales: {
                 yAxes: [{
                     scaleLabel: {
-                        labelString: "Parts Per Million (PPM)",
-                        labelString: "Millivolts (mV)"
+                        labelString: "Millivolts (mV) & Parts Per Million (PPM)"
                     },
                     ticks: {
                         maxTicksLimit: 20
@@ -83,15 +81,15 @@ let chartView = new ChartJsView({
                 }],
             }
         },
-//        datasetsProps: { // these dont work for whatever reason
-//            //backgroundColor: 'rgba(141,242,246, 0.1)'
-////            borderColor: 'rgba(255, 183, 51, 0.8)', // Line color
-////            backgroundColor: 'rgba(255, 217, 148, 0.8)', // Fill color under the line
-////            pointBackgroundColor: '#fff7ab', // Point color
-////            pointBorderColor: 'rgba(255, 183, 51, 0.8)', // Border color around points
-////            pointHoverBackgroundColor: 'rgba(255, 251, 50, 0.8)', // Point hover background color
-////            pointHoverBorderColor: 'rgba(255, 88, 50, 0.8)' // Point hover border color
-//        }
+        datasetsProps: {
+            backgroundColor: 'rgba(141,242,246, 0.1)' // this stays the same blue no matter what color i change it to
+//            borderColor: 'rgba(255, 183, 51, 0.8)', // Line color
+//            backgroundColor: 'rgba(255, 217, 148, 0.8)', // Fill color under the line
+//            pointBackgroundColor: '#fff7ab', // Point color
+//            pointBorderColor: 'rgba(255, 183, 51, 0.8)', // Border color around points
+//            pointHoverBackgroundColor: 'rgba(255, 251, 50, 0.8)', // Point hover background color
+//            pointHoverBorderColor: 'rgba(255, 88, 50, 0.8)' // Point hover border color
+        }
     }
 });
 
