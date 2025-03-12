@@ -67,7 +67,7 @@ module.exports = [{
 }];
 
 let directories = ['cesium-fois',
-    'cesium-location','cesium-location-opts','cesium-location-path','chart', 'turbidity-chart', 'chart-batch',
+    'cesium-location','cesium-location-opts','cesium-location-path','chart', 'turbidity-chart', 'turb-chart-batch', 'chart-batch',
     'leaflet-location', 'leaflet-location-fois', 'leaflet-location-heading',
     'leaflet-location-path', 'openlayers-location', 'mapbox-location-path-heading', 'zIndex-location-path', 'range-slider',
     'video-h264','video-h264-draping','video-h264-webcodec-api', 'video-h264-transferable','video-mjpeg', 'video-with-control-vuejs',

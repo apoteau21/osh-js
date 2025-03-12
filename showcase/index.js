@@ -40,6 +40,11 @@ var samples = [
       description: "Display a chart with results from a turbidity sensor.",
       url: "turbidity-chart"
     },
+    {
+        name: "Turbidity Batch Chart (Turb-Chart-Batch.js)",
+        description: "Display two charts with results from a turbidity sensor.",
+        url: "turb-chart-batch"
+      },
   {
     name: "Simple Batch Chart (Chart.js)",
     description: "Display a chart with time series of weather measurements and using different datasource parameters " +
